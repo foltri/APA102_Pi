@@ -1,6 +1,7 @@
 """The module contains templates for colour cycles"""
 import time
-import apa102
+import APA102_ASUS.apa102 as apa102
+
 
 class ColorCycleTemplate:
     """This class is the basis of all color cycles.
@@ -58,13 +59,11 @@ class ColorCycleTemplate:
         strip.clear_strip()
         strip.cleanup()
 
-
     def start(self):
         """This method does the actual work."""
         try:
             strip = apa102.APA102(num_led=self.num_led,
                                   global_brightness=self.global_brightness,
-                                  mosi = self.mosi, sclk = self.sclk,
                                   order=self.order) # Initialize the strip
             strip.clear_strip()
             self.init(strip, self.num_led) # Call the subclasses init method
