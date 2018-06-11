@@ -1,6 +1,5 @@
 """This module contains a few concrete colour cycles to play with"""
 
-# from APA102_ASUS.colorcycletemplate import ColorCycleTemplate
 import APA102_ASUS.colorcycletemplate as colorcycletemplate
 
 
